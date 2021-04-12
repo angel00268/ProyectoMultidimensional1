@@ -1,0 +1,187 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="279cac47-1266-4839-b27f-efd5677e8c88" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Transaccion</ID>
+  <Name>Fact Transaccion</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="a6051ade-39ad-43be-95c4-ca12341e817b">
+    <DataSourceViewID>Vista Money Bank DM</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="ea66c2db-ef22-4289-a048-3edbab13690a">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="cf31378e-5801-474f-91b4-3b0db655ff38">
+      <ID>Id Transaccion</ID>
+      <Name>Id Transaccion</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c35ec76f-1b0a-463f-9027-15e007ad4469">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bbd74c11-db7c-4e44-9e19-3def3877ff12">
+            <TableID>dbo_Fact_Transaccion</TableID>
+            <ColumnID>idTransaccion</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="e9ff4cc1-77bb-4b58-a5b9-8b12390ddcae">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7def2c51-37af-4911-af4e-2a15a8a177ac">
+            <TableID>dbo_Fact_Transaccion</TableID>
+            <ColumnID>idUsuario</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="6d9fef82-9454-4672-b662-490cc900d016">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="48d1fe1f-3c4c-467c-b923-aaee5a351845">
+            <TableID>dbo_Fact_Transaccion</TableID>
+            <ColumnID>idCliente</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="18ba421c-e2b7-48d6-8593-03e6167977a5">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1669d529-283f-40c7-afc7-9ee3a234e330">
+            <TableID>dbo_Fact_Transaccion</TableID>
+            <ColumnID>idCuenta</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ddc06056-1fb6-4cf6-958e-f31e0117638a">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f72cc40b-0fbc-48de-99c4-4bb271df8ee3">
+          <TableID>dbo_Fact_Transaccion</TableID>
+          <ColumnID>idTransaccion</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9527ddc0-71a7-4b66-a5be-b6cbc9c68103">
+          <AttributeID>Id Usuario</AttributeID>
+          <Name>Id Usuario</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8fd39a98-c910-494f-b0aa-d17b621bf0ef">
+          <AttributeID>Id Cliente</AttributeID>
+          <Name>Id Cliente</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="79abd69f-bf86-47ff-81f6-713d3324c871">
+          <AttributeID>Id Tiempo</AttributeID>
+          <Name>Id Tiempo</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ead9f9f1-6533-4ecb-b6b5-88316f2c451b">
+          <AttributeID>Id Cuenta</AttributeID>
+          <Name>Id Cuenta</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d5214425-8bf9-4947-b286-c254f7d4ffe8">
+      <ID>Id Usuario</ID>
+      <Name>Id Usuario</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="334ac34c-3058-4f06-8915-1bf37e66471a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="96aa4442-ef61-466c-8412-dbe95a7bff87">
+            <TableID>dbo_Fact_Transaccion</TableID>
+            <ColumnID>idUsuario</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c0465eac-5019-4782-a7cc-9eec147dd738">
+      <ID>Id Cliente</ID>
+      <Name>Id Cliente</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="85701ad5-12eb-409b-88ba-2917f3fbcb57">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e9c59691-3089-4d97-9aeb-091f15c21d7b">
+            <TableID>dbo_Fact_Transaccion</TableID>
+            <ColumnID>idCliente</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d817eda1-9a7f-448c-9441-8ca9a989b32b">
+      <ID>Id Tiempo</ID>
+      <Name>Id Tiempo</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="10530d5c-c07b-45e1-a40c-532afa15fa03">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f59b45cf-2931-4313-9e07-2d207cce25fd">
+            <TableID>dbo_Fact_Transaccion</TableID>
+            <ColumnID>IdTiempo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="705add57-2a81-4d29-8e1b-f633b8197822">
+      <ID>Id Cuenta</ID>
+      <Name>Id Cuenta</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="65533479-6d57-445c-b180-99ae7656a302">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8310850c-2ba3-4117-a0ab-f8f3da6e9cc0">
+            <TableID>dbo_Fact_Transaccion</TableID>
+            <ColumnID>idCuenta</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
